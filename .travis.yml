@@ -1,0 +1,20 @@
+language: java
+before_install:
+  # Install base Android SDK
+  - sudo apt-get update -qq
+  - if [ `uname -m` = x86_64 ]; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch; fi
+  # download the latest android sdk and unzip
+  - wget http://dl.google.com/android/android-sdk_r21-linux.tgz
+  - tar -zxf android-sdk_r21-linux.tgz
+  # set up the geekgugi GUGI_HOME 
+  - export GUGI_HOME=~/build/geekgugi/mpetition/
+  # setup your ANDROID_HOME and PATH environment variables
+  # use ~/build/[Github username]/[project]/android-sdk-linux
+  - export ANDROID_HOME=~/build/geekgugi/mpetition/android-sdk-linux
+  - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+  # only update the sdk for the tools and platform-tools (1,2) and whatever api level
+  # you are building for android (run "android list sdk" to get the full list.  9 = 2.3.3 or API level 10
+  # android update sdk   --filter 11,12,13,14 --no-ui --force
+  # android update project --name mpetition --target 2  --path ${GUGI_HOME}/MPetition-app/
+  - sudo chmod a+x ./Build/buildstuff.sh
+script: "sh ./Build/buildstuff.sh"
