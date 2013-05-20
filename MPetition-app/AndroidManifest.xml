@@ -24,6 +24,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="in.xperinn.mpetition.PlayPetitionActivity"
+            android:label="@string/title_activity_play_petition"
+             >
+        </activity>
+        <activity
+            android:name="in.xperinn.mpetition.AboutGameActivity"
+            android:label="@string/title_activity_about_game" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity
+            android:name="in.xperinn.mpetition.SettingGameActivity"
+            android:label="@string/title_activity_setting_game"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
     </application>
 
 </manifest>
