@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bak"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PlayPetitionActivity" >
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/petitiontext"
+        android:layout_below="@+id/petitiontext"
+        android:layout_marginTop="28dp"
+        android:text="@string/question"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/hidentext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/questionPetit"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bak"
+        android:ems="10"
+        android:autoText="false"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/sendAnswerButton"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/questionPetit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/button"
+        android:text="@string/sendAnswer" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:text="@string/petition"
+        android:textColor="#ffffff"
+        android:textSize="25sp	" />
+
+    <EditText
+        android:id="@+id/petitiontext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sample"
+        android:layout_below="@+id/textView1"
+        android:background="@drawable/wooden"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/questionPetit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/question"
+        android:layout_below="@+id/question"
+        android:background="@drawable/wooden"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/petitiontext"
+        android:layout_alignBottom="@+id/petitiontext"
+        android:layout_alignLeft="@+id/textView1"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+
+</RelativeLayout>
